@@ -13,6 +13,7 @@ import static ru.Sodch.TestSetup.loginSetup;
 
 
 public class TestTest {
+
     @BeforeClass
     public static void openSodch() {
         loginSetup();

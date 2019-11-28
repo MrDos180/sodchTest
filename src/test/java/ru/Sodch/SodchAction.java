@@ -22,8 +22,8 @@ public class SodchAction {
    }
     @Description("create KUSP")
    public static void createKusp() {
-  createKuspButton().click();
-   surnameField().shouldBe(visible);
+    createKuspButton().click();
+    surnameField().shouldBe(visible);
        surnameField().setValue("Иванов");
        nameField().setValue("Иван");
        thirdnameField().setValue("Иванович");
@@ -35,7 +35,7 @@ public class SodchAction {
 
 
        $(By.xpath("//div[.='КУСП № "+ kusp+" успешно сохранен']")).shouldBe(hidden);
-      closeButton().click();
+        closeButton().click();
        $(By.xpath("//div[.='"+kusp+"']")).shouldBe(visible);
 
    }
