@@ -1,5 +1,6 @@
 package ru.Sodch;
 
+import jdk.jfr.Description;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,7 +18,8 @@ public class TestTest {
         loginSetup();
     }
     @Test
-    public void login() {
+    @Description("Login SODCH and KUSP create")
+    public void action() {
         loginAction("operalex","operalex");
         createKusp();
 
