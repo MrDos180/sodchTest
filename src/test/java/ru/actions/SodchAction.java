@@ -1,4 +1,4 @@
-package ru.Sodch;
+package ru.actions;
 
 import jdk.jfr.Description;
 import org.openqa.selenium.By;

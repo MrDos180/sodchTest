@@ -1,4 +1,4 @@
-package ru.Sodch;
+package ru.actions;
 
 import com.codeborne.selenide.Configuration;
 

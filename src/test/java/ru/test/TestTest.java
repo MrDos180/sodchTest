@@ -1,4 +1,4 @@
-package ru.Sodch;
+package ru.test;
 
 import jdk.jfr.Description;
 import org.junit.AfterClass;
@@ -6,9 +6,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static ru.Sodch.SodchAction.createKusp;
-import static ru.Sodch.SodchAction.loginAction;
-import static ru.Sodch.TestSetup.loginSetup;
+import static ru.actions.SodchAction.createKusp;
+import static ru.actions.SodchAction.loginAction;
+import static ru.actions.TestSetup.loginSetup;
 
 
 
