@@ -14,14 +14,15 @@ public class SelenideElements {
     public static SelenideElement passwordField () {
         return $(By.xpath("//div[.='Пароль:']//input"));
     }
+
     public static SelenideElement enterButton () {
         return  $(By.xpath("//a[@class='x-btn x-unselectable x-box-item x-toolbar-item x-btn-default-small']"));
     }
 
-
     public static SelenideElement saveButton () {
         return $(By.xpath("//span[.='Сохранить']"));
     }
+
 
     public static SelenideElement surnameField () {
         return $(By.xpath("//div[.='Фамилия:']//input"));
