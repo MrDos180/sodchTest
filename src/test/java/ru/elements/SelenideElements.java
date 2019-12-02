@@ -56,6 +56,28 @@ public class SelenideElements {
         return   $(By.xpath("//div[@class='x-container navigationItem x-container-default x-box-layout-ct']//label[.='Создать КУСП']"));
     }
 
+    public static SelenideElement journalButton () {
+        return   $(By.xpath("//div[@class='x-container navigationItem x-container-default x-box-layout-ct']//label[.='Журнал']"));
+    }
+
+    public static SelenideElement createSummaryButton () {
+        return   $(By.xpath("//span[@class='x-btn-button x-btn-button-default-small x-btn-text  x-btn-icon x-btn-icon-left x-btn-button-center ']//span[.='Создать']"));
+    }
+
+    public static SelenideElement incidentSummaryField () {
+        return   $(By.xpath("//div[.='Вид преступления:']//input"));
+    }
+
+    public static SelenideElement saveSummaryButton () {
+        return   $(By.xpath("//a[@class='x-btn x-unselectable x-box-item x-btn-green-btn-medium']"));
+    }
+
+    public static SelenideElement closeSummaryButton () {
+        return   $(By.xpath("//span[.='Закрыть']//following::span"));
+    }
+
+
+
 
 
 }

@@ -6,8 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static ru.actions.SodchAction.createKusp;
-import static ru.actions.SodchAction.loginAction;
+import static ru.actions.SodchAction.*;
 import static ru.actions.TestSetup.loginSetup;
 
 
@@ -18,12 +17,17 @@ public class TestTest {
     public static void openSodch() {
         loginSetup();
     }
-    @Test
+   /* @Test
     @Description("Login SODCH and KUSP create")
     public void action() {
         loginAction("operalex","operalex");
         createKusp();
 
+    }*/
+    @Test
+    public void svodka() {
+        loginAction("operalex","operalex");
+        createSummary();
     }
 
     @AfterClass
