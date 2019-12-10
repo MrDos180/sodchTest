@@ -17,18 +17,18 @@ public class TestTest {
     public static void openSodch() {
         loginSetup();
     }
-   /* @Test
+    @Test
     @Description("Login SODCH and KUSP create")
     public void action() {
         loginAction("operalex","operalex");
         createKusp();
 
-    }*/
-    @Test
+    }
+   /* @Test
     public void svodka() {
         loginAction("operalex","operalex");
         createSummary();
-    }
+    }*/
 
     @AfterClass
     public static void logout () {

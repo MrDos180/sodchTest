@@ -3,41 +3,45 @@ package ru.elements;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+
+import ru.locators.Buttons;
+import ru.locators.Selectors;
+import ru.locators.Span;
+
 import static com.codeborne.selenide.Selenide.$;
 
 public class SelenideElements {
 
     public static SelenideElement loginField () {
-        return $(By.xpath("//div[.='Логин:']//input"));
+        return $(By.xpath(Selectors.findInput("Логин:")));
     }
 
     public static SelenideElement passwordField () {
-        return $(By.xpath("//div[.='Пароль:']//input"));
+        return $(By.xpath(Selectors.findInput("Пароль:")));
     }
 
     public static SelenideElement enterButton () {
-        return  $(By.xpath("//a[@class='x-btn x-unselectable x-box-item x-toolbar-item x-btn-default-small']"));
+        return  $(By.xpath(Selectors.findSpan("Войти")));
     }
 
     public static SelenideElement saveButton () {
-        return $(By.xpath("//span[.='Сохранить']"));
+        return $(By.xpath(Selectors.findSpan("Сохранить")));
     }
 
-
     public static SelenideElement surnameField () {
-        return $(By.xpath("//div[.='Фамилия:']//input"));
+        return $(By.xpath(Selectors.findInput("Фамилия:")));
     }
 
     public static SelenideElement nameField () {
-        return $(By.xpath("//div[.='Имя:']//input"));
+        return $(By.xpath(Selectors.findInput("Имя:")));
     }
 
     public static SelenideElement thirdnameField () {
-        return $(By.xpath("//div[.='Отчество:']//input"));
+        return $(By.xpath(Selectors.findInput("Отчество:")));
     }
 
     public static SelenideElement fabulaField () {
-        return $(By.xpath("//textarea[@class='x-form-field x-form-required-field x-form-text x-form-text-default x-form-textarea']"));
+        return $(By.xpath("//span[.='Первичная фабула']//following::textarea"));
     }
 
     public static SelenideElement incidentField () {
@@ -45,27 +49,27 @@ public class SelenideElements {
     }
 
     public static SelenideElement kuspNumber () {
-        return $(By.xpath("//div[.='№:']//input"));
+        return $(By.xpath(Selectors.findInput("№:")));
     }
 
     public static SelenideElement closeButton () {
-        return  $(By.xpath("//span[.='Закрыть']"));
+        return $(By.xpath(Selectors.findSpan("Закрыть")));
     }
 
     public static SelenideElement createKuspButton () {
-        return   $(By.xpath("//div[@class='x-container navigationItem x-container-default x-box-layout-ct']//label[.='Создать КУСП']"));
+        return   $(By.xpath(Selectors.findLabel("Создать КУСП")));
     }
 
     public static SelenideElement journalButton () {
-        return   $(By.xpath("//div[@class='x-container navigationItem x-container-default x-box-layout-ct']//label[.='Журнал']"));
+        return   $(By.xpath(Selectors.findLabel("Журнал")));
     }
 
     public static SelenideElement createSummaryButton () {
-        return   $(By.xpath("//span[@class='x-btn-button x-btn-button-default-small x-btn-text  x-btn-icon x-btn-icon-left x-btn-button-center ']//span[.='Создать']"));
+        return   $(By.xpath(Selectors.findSpan("Создать")));
     }
 
     public static SelenideElement incidentSummaryField () {
-        return   $(By.xpath("//div[.='Вид преступления:']//input"));
+        return   $(By.xpath(Selectors.findInput("Вид преступления")));
     }
 
     public static SelenideElement saveSummaryButton () {
@@ -76,7 +80,18 @@ public class SelenideElements {
         return   $(By.xpath("//span[.='Закрыть']//following::span"));
     }
 
+    public static SelenideElement summaryFabulaField () {
+        return  $(By.xpath(Selectors.findTextArea("Вид преступления")));
+    }
+/*
+    public static SelenideElement summaryDateField () {
+        return Label.summaryDateTimefield("Дата и время регистрации",0);
+    }
 
+    public static SelenideElement summaryTimeField () {
+        return Label.summaryDateTimefield("Дата и время регистрации",1);
+    }
+*/
 
 
 

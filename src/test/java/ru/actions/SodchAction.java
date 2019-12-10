@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import jdk.jfr.Description;
 import org.openqa.selenium.By;
 
+
 import java.util.ArrayList;
 
 import static com.codeborne.selenide.Condition.*;
@@ -17,8 +18,8 @@ public class SodchAction {
 
 
    public static void loginAction (String sodchUsername, String sodchPassword) {
-       loginField().setValue(sodchUsername);
-       passwordField().setValue(sodchPassword);
+        loginField().setValue(sodchUsername);
+        passwordField().setValue(sodchPassword);
        enterButton().click();
        createKuspButton().shouldBe(visible);
 
@@ -50,15 +51,14 @@ public class SodchAction {
 
       incidentSummaryField().setValue("Разбой");
 
-       SelenideElement fabula = $$(By.xpath("//span[.='Раздел сводки:']//ancestor::div//textarea")).get(0);
+      summaryFabulaField().setValue("тест");
 
-       fabula.setValue("тест");
 
-       SelenideElement summaryDate = $$(By.xpath("//label[.='Дата и время регистрации:']//following-sibling::div//input")).get(0);
-       SelenideElement summaryTime= $$(By.xpath("//label[.='Дата и время регистрации:']//following-sibling::div//input")).get(1);
 
-       String sumDate = summaryDate.getValue();
-       String sumTime = summaryTime.getValue();
+
+
+      // String sumDate = summaryDateField().getValue();
+       //String sumTime = summaryTimeField().getValue();
 
 
        saveSummaryButton().click();
@@ -66,8 +66,10 @@ public class SodchAction {
 
 
 
-       System.out.println(sumDate +" "+sumTime);
-      $(By.xpath("//div[.='"+ sumDate +" "+sumTime+"']")).shouldBe(visible);
+
+
+    //   System.out.println(sumDate +" "+sumTime);
+   //   $(By.xpath("//div[.='"+ sumDate +" "+sumTime+"']")).shouldBe(visible);
 
 
    }
