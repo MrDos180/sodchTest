@@ -9,16 +9,16 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class Inputs {
-    public static SelenideElement inputField (String name) {
-        return $(By.xpath(Selectors.findInput(name)));
+    public static SelenideElement findDiv (String name){
+        return $(By.xpath(Selectors.findDiv(name)));
     }
+
     public static SelenideElement fabulaField () {
         return $(By.xpath("//span[.='Первичная фабула']//following::textarea"));
     }
-    public static SelenideElement incidentField (String name) {
+    public static SelenideElement findPlaceholder (String name) {
         return $(By.xpath(Selectors.findPlaceholder(name)));
     }
-
     public static SelenideElement findInput (String name) {
         return   $(By.xpath(Selectors.findInput(name)));
     }
@@ -33,5 +33,6 @@ public class Inputs {
     public static SelenideElement summaryTimeField (String name) {
         return $$(By.xpath(Selectors.findInputbyLabel(name))).get(1);
     }
+
 
 }

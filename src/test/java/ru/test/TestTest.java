@@ -2,6 +2,7 @@ package ru.test;
 
 import jdk.jfr.Description;
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -17,21 +18,33 @@ public class TestTest {
     public static void openSodch() {
         loginSetup();
     }
-      @Test
+
+   // @BeforeClass
+   // public static void login () {loginAction("operalex","operalex");}
+
+  /*    @Test
   @Description("Login SODCH and KUSP create")
-  public void action() {
-      loginAction("operalex","operalex");
-      createKusp();
+  public void createKusp() {
+
+      createKuspAction();
   }
     @Test
     @Description("Login SODCH and Summary create")
-    public void svodka() {
-        loginAction("operalex","operalex");
-        createSummary();
+    public void createSummary() {
+
+        createSummaryAction();
+    }
+
+    @Test
+    @Description("Choose roles")
+    public void chooseRole() {
+        loginActionForCreate("iivanov","iivanov");
+
+
     }
 
     @AfterClass
     public static void logout () {
         close();
-    }
+    }*/
 }

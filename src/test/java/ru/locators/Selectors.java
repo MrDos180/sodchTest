@@ -2,11 +2,11 @@ package ru.locators;
 
 
 public class Selectors {
-    // ищеь Div
+    // ищет Div
     public static String findDiv(String input) {
         return "//div[.='" + input + "']";
     }
-    // Ищет элемент по Title
+    // Ищет элемент ввода
     public static String findInput(String input) {
         return "//div[.='" + input + "']//input";
     }
@@ -21,7 +21,7 @@ public class Selectors {
     // ищет Span потексту
     public static String findSpan(String input)
     {
-        return ".//span[.='"+input+"']";
+        return "//span[.='"+input+"']";
     }
 
     public static String findTextArea(String input)
@@ -32,10 +32,12 @@ public class Selectors {
     {
         return "//input[@placeholder='"+input+"']";
     }
+    // Ищет эелемент A
     public static String findA (String input)
     {
         return "//a[.='"+input+"']";
     }
+    // Ищет Span по тексту
     public static String findSpantext (String input)
     {
         return "//span[text()='" + input + "']";
