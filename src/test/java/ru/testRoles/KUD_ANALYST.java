@@ -5,18 +5,19 @@ import org.junit.Before;
 import org.junit.Test;
 import ru.actions.SodchAction;
 import ru.actions.TestSetup;
+import ru.elements.Inputs;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
 import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
-import static ru.elements.Buttons.kuspButton;
+import static ru.elements.Buttons.*;
 
-public class OMVD_DUTY {
+public class KUD_ANALYST {
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Аналитик по доставленным");
 
     }
 
@@ -24,8 +25,7 @@ public class OMVD_DUTY {
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
-        SodchAction.createKuspAction();
-
+        kuspButton("Журнал").shouldBe(visible).click();
 
 
         close();
@@ -33,6 +33,6 @@ public class OMVD_DUTY {
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Аналитик по доставленным");
     }
 }

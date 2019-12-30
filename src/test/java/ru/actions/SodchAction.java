@@ -38,7 +38,6 @@ public class SodchAction {
         fabulaField().setValue("тест");
         findPlaceholder("Форма поступления").setValue("Анонимное сообщение о террористическом акте");
         findVisibleButton("Сохранить").click();
-       // button("Сохранить").click();
         String kusp = findInput("№:").getValue();
         findDiv("КУСП № "+ kusp+" успешно сохранен");
         button("Закрыть").click();

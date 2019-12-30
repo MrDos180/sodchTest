@@ -14,6 +14,9 @@ public class Selectors {
     public static String findInputbyLabel (String input){
         return  "//label[.='"+input+"']//following-sibling::div//input";
     }
+    public static String findInputbyDiv (String input){
+        return  "//div[.='"+input+"']//following-sibling::div//input";
+    }
     // ищет Label по тексту
     public static String findLabel (String input){
         return  "//label[.='"+input+"']";
@@ -24,6 +27,7 @@ public class Selectors {
         return "//span[.='"+input+"']";
     }
 
+    public static String findTextAreaByDiv(String input) {return "//div[.='"+input+"']//textarea";}
     public static String findTextArea(String input)
     {
         return  "//span[.='"+input+":']//ancestor::div//textarea";

@@ -12,11 +12,11 @@ import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
 import static ru.elements.Buttons.kuspButton;
 
-public class OMVD_DUTY {
+public class KUSP_RECEPTIONIST {
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Ответственный за регистрацию КУСП");
 
     }
 
@@ -28,11 +28,13 @@ public class OMVD_DUTY {
 
 
 
+
+
         close();
 
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Ответственный за регистрацию КУСП");
     }
 }

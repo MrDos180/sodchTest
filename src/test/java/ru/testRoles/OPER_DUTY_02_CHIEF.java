@@ -6,17 +6,15 @@ import org.junit.Test;
 import ru.actions.SodchAction;
 import ru.actions.TestSetup;
 
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
 import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
-import static ru.elements.Buttons.kuspButton;
 
-public class OMVD_DUTY {
+public class OPER_DUTY_02_CHIEF {
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Начальник смены");
 
     }
 
@@ -24,7 +22,9 @@ public class OMVD_DUTY {
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
-        SodchAction.createKuspAction();
+       // SodchAction.createKuspAction();
+
+
 
 
 
@@ -33,6 +33,8 @@ public class OMVD_DUTY {
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Начальник смены");
     }
 }
+
+

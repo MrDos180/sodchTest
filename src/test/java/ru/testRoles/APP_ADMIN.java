@@ -11,12 +11,14 @@ import static com.codeborne.selenide.Selenide.close;
 import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
 import static ru.elements.Buttons.kuspButton;
+import static ru.elements.Inputs.findDiv;
 
-public class OMVD_DUTY {
+public class APP_ADMIN {
+
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Администратор приложения");
 
     }
 
@@ -24,15 +26,14 @@ public class OMVD_DUTY {
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
-        SodchAction.createKuspAction();
-
-
+        kuspButton("Пользователи и группы").shouldBe(visible).click();
+        findDiv("usertest").doubleClick();
 
         close();
 
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Администратор приложения");
     }
 }

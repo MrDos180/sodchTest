@@ -5,18 +5,20 @@ import org.junit.Before;
 import org.junit.Test;
 import ru.actions.SodchAction;
 import ru.actions.TestSetup;
+import ru.elements.Inputs;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
 import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
+import static ru.elements.Buttons.findVisibleButton;
 import static ru.elements.Buttons.kuspButton;
 
-public class OMVD_DUTY {
+public class GIBDD_USER {
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Сотрудник ГИБДД");
 
     }
 
@@ -24,7 +26,14 @@ public class OMVD_DUTY {
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
-        SodchAction.createKuspAction();
+        kuspButton("Учет ТС").shouldBe(visible).click();
+        findVisibleButton("Добавить").click();
+        Inputs.findInput("Марка:").setValue("ЗИЛ");
+        Inputs.findInput("Модель:").setValue("123");
+        Inputs.findInput("Тип кузова:").setValue("БОРТОВАЯ");
+        Inputs.findInput("Гос. номер:").setValue("к123ех777");
+        Inputs.findInput("Отображать на карте:").click();
+
 
 
 
@@ -33,6 +42,6 @@ public class OMVD_DUTY {
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Сотрудник ГИБДД");
     }
 }

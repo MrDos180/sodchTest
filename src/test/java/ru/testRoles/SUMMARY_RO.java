@@ -12,11 +12,11 @@ import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
 import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
 import static ru.elements.Buttons.kuspButton;
 
-public class OMVD_DUTY {
+public class SUMMARY_RO {
     @Before
     public  void createUser () {
 
-        createUserAction("Оперативный дежурный");
+        createUserAction("Оператор сводки (только просмотр)");
 
     }
 
@@ -24,15 +24,13 @@ public class OMVD_DUTY {
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
-        SodchAction.createKuspAction();
-
-
-
+        kuspButton("Журнал").shouldBe(visible).click();
         close();
+
 
     }
     @After
     public void deleteRole (){
-        deleteRoleAction("Оперативный дежурный");
+        deleteRoleAction("Оператор сводки (только просмотр)");
     }
 }

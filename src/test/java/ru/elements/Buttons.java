@@ -21,7 +21,13 @@ public class Buttons {
     }
 
     public static SelenideElement roleCheckbox (String name){
-        return  $(By.xpath("//div[.='"+name+"']//ancestor::tr//div[@class='x-grid-row-checker']"));
+        return  $$(By.xpath("//div[.='"+name+"']//ancestor::tr//div[@class='x-grid-row-checker']")).filter(Condition.visible).get(0);
+    }
+    public static SelenideElement planTime (String name){
+        return $$(By.xpath("//div[.='"+name+"']//div")).filter(Condition.visible).get(0);
+    }
+    public static SelenideElement findunvisibleButton (String name) {
+        return   $$(By.xpath(Selectors.findSpantext(name))).filter(Condition.visible).get(1);
     }
 
 

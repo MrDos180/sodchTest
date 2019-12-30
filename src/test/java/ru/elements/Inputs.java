@@ -34,5 +34,28 @@ public class Inputs {
         return $$(By.xpath(Selectors.findInputbyLabel(name))).get(1);
     }
 
+    public static SelenideElement wantedTextField (String name){
+        return $(By.xpath(Selectors.findTextAreaByDiv(name)));
+    }
+    public static SelenideElement sortingField (String name){
+        return $$(By.xpath(Selectors.findInput(name))).filter(Condition.visible).get(0);    }
+
+     public static SelenideElement rolesView (String name){
+        return $$(By.xpath(Selectors.findInputbyDiv(name))).filter(Condition.visible).get(0);
+     }
+
+     public static SelenideElement rolesViewNumber(String name) {
+        return $(By.xpath("//li[.='"+name+"']"));
+    }
+    public static SelenideElement findVisibleDiv (String name){
+        return $$(By.xpath(Selectors.findDiv(name))).filter(Condition.visible).get(0);
+    }
+
+    public static SelenideElement nubmberOfRolePage () {
+        return $$(By.xpath("//input[@name='inputItem']")).filter(Condition.visible).get(0);
+    }
+    public static SelenideElement nameFilterRole () {
+        return $(By.xpath("//div[.='Наименование']//input"));
+    }
 
 }
