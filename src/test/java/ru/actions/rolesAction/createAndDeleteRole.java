@@ -22,6 +22,7 @@ public class createAndDeleteRole {
         //Inputs.nubmberOfRolePage().setValue(page).pressEnter();
        // rolesView("отображать по").click();
        // rolesViewNumber("50").click();
+
         Inputs.nameFilterRole().setValue(name);
         roleCheckbox(name).scrollIntoView("{block: \"center\"}").click();
         button("Выбрать").click();
