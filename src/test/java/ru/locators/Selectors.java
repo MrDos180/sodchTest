@@ -47,5 +47,9 @@ public class Selectors {
         return "//span[text()='" + input + "']";
     }
 
+    public static String findRrcButton (String input){
+        return "//button[.='" + input + "']";
+    }
+
 
 }

@@ -11,8 +11,7 @@ import java.util.Date;
 import java.text.DateFormat;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
-import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
-import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
+import static ru.actions.rolesAction.СreateAndDeleteRole.*;
 import static ru.elements.Buttons.*;
 
 

@@ -29,6 +29,13 @@ public class Buttons {
     public static SelenideElement findunvisibleButton (String name) {
         return   $$(By.xpath(Selectors.findSpantext(name))).filter(Condition.visible).get(1);
     }
+    public static SelenideElement rrcButton (String name) {
+        return $(By.xpath(Selectors.findRrcButton(name)));
+    }
+
+    public static SelenideElement rrcVisibleButton (String name) {
+        return $(By.xpath(Selectors.findRrcButton(name)));
+    }
 
 
 

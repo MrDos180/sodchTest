@@ -3,12 +3,11 @@ package ru.testRoles;
 import org.junit.*;
 import ru.actions.SodchAction;
 import ru.actions.TestSetup;
-import ru.actions.rolesAction.createAndDeleteRole;
+
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
-import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
+import static ru.actions.rolesAction.СreateAndDeleteRole.*;
 import static ru.elements.Buttons.*;
 import static ru.elements.Inputs.*;
 

@@ -8,7 +8,7 @@ import ru.actions.TestSetup;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
-import static ru.actions.rolesAction.createAndDeleteRole.*;
+import static ru.actions.rolesAction.СreateAndDeleteRole.*;
 import static ru.elements.Buttons.button;
 import static ru.elements.Buttons.kuspButton;
 

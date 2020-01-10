@@ -9,7 +9,7 @@ import ru.elements.Inputs;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.close;
-import static ru.actions.rolesAction.createAndDeleteRole.*;
+import static ru.actions.rolesAction.СreateAndDeleteRole.*;
 import static ru.elements.Buttons.*;
 
 public class ALERT_DUTY {

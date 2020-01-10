@@ -7,8 +7,7 @@ import ru.actions.SodchAction;
 import ru.actions.TestSetup;
 
 import static com.codeborne.selenide.Selenide.close;
-import static ru.actions.rolesAction.createAndDeleteRole.createUserAction;
-import static ru.actions.rolesAction.createAndDeleteRole.deleteRoleAction;
+import static ru.actions.rolesAction.СreateAndDeleteRole.*;
 
 public class OPER_DUTY_02_CHIEF {
     @Before

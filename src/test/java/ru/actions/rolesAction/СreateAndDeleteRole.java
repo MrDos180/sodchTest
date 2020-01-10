@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.close;
 import static ru.elements.Buttons.*;
 import static ru.elements.Inputs.*;
 
-public class createAndDeleteRole {
+public class СreateAndDeleteRole {
 
     public static void createUserAction(String name) {
 
