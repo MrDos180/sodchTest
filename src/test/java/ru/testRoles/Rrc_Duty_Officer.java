@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import ru.actions.SodchAction;
 import ru.actions.TestSetup;
+import ru.elements.Inputs;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
@@ -29,14 +30,11 @@ public class Rrc_Duty_Officer {
         SodchAction.loginActionForCreate("usertest","usertest");
         button("События").shouldBe(visible).click();
         rrcButton("Создать").shouldBe(visible).click();
-        $(By.xpath("//option[.='Криминальное (ЧП)']")).click();
-        $(By.xpath("//option[.='Вологда']")).click();
-        $(By.xpath("//textarea[@name='reportContent']")).sendKeys("123");
-
+        Inputs.findRrcList("Криминальное (ЧП)").click();
+        Inputs.findRrcList("Вологда").click();
+        Inputs.findRrcFabula().sendKeys("123");
         rrcVisibleButton("Сохранить").scrollIntoView(false).click();
-        $(By.xpath("//div[text()='Данные успешно сохранены']")).shouldBe(visible);
-
-
+        Inputs.findDivByTextRrc("Данные успешно сохранены").shouldBe(visible);
         close();
 
     }

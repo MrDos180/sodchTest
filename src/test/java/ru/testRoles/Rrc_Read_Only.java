@@ -27,10 +27,6 @@ public class Rrc_Read_Only {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");
         button("Поиск").shouldBe(visible).click();
-        //rrcButton("Поиск").shouldBe(visible).click();
-
-
-
         close();
 
     }

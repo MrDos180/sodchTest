@@ -50,6 +50,9 @@ public class Selectors {
     public static String findRrcButton (String input){
         return "//button[.='" + input + "']";
     }
+    public static String findDivByText(String input) {
+        return "//div[text()='" + input + "']";
+    }
 
 
 }

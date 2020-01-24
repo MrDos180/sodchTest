@@ -63,4 +63,13 @@ public class Inputs {
         return $(By.xpath("//div[.='Наименование']//input"));
     }
 
+    public static SelenideElement findDivByTextRrc (String name){
+        return $(By.xpath(Selectors.findDivByText(name)));
+    }
+    public static SelenideElement findRrcList (String name){
+        return $(By.xpath("//option[.='"+name+"']"));
+    }
+    public static SelenideElement findRrcFabula (){
+        return $(By.xpath("//textarea[@name='reportContent']"));
+    }
 }
