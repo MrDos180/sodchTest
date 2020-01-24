@@ -34,7 +34,7 @@ public class Buttons {
     }
 
     public static SelenideElement rrcVisibleButton (String name) {
-        return $(By.xpath(Selectors.findRrcButton(name)));
+        return $$(By.xpath(Selectors.findRrcButton(name))).filter(Condition.visible).get(0);
     }
 
 

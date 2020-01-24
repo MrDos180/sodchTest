@@ -22,6 +22,11 @@ public class Inputs {
     public static SelenideElement findInput (String name) {
         return   $(By.xpath(Selectors.findInput(name)));
     }
+    public static SelenideElement findVisibleInput (String name) {
+        return   $$(By.xpath(Selectors.findInput(name))).filter(Condition.visible).get(1);
+    }
+
+
     public static SelenideElement summaryTextField (String name) {
         return  $$(By.xpath(Selectors.findTextArea(name))).filter(Condition.visible).get(0);
     }

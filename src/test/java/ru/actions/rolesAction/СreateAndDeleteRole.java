@@ -45,4 +45,43 @@ public class СreateAndDeleteRole {
         findDiv("Изменения успешно сохранены").shouldBe(disappear);
         close();
     }
+
+    public static void createNoGuUserAction(String name) {
+
+        TestSetup.loginSetup();
+        SodchAction.loginActionForCreate("iivanov","iivanov");
+        kuspButton("Пользователи и группы").shouldBe(visible).click();
+        findDiv("Нижестоящие тер. органы").click();
+        findInput("Логин").sendKeys("usertest1");
+        findDiv("usertest1").doubleClick();
+
+        findVisibleButton("Назначить роль").click();
+        //Inputs.nubmberOfRolePage().setValue(page).pressEnter();
+        // rolesView("отображать по").click();
+        // rolesViewNumber("50").click();
+
+        Inputs.nameFilterRole().setValue(name);
+        roleCheckbox(name).scrollIntoView("{block: \"center\"}").click();
+        button("Выбрать").click();
+        findVisibleButton("Сохранить").click();
+        findDiv("Изменения успешно сохранены").shouldBe(disappear);
+        close();
+
+    }
+
+    public static void deleteNoGuRoleAction (String name){
+        TestSetup.loginSetup();
+        SodchAction.loginActionForCreate("iivanov","iivanov");
+        kuspButton("Пользователи и группы").shouldBe(visible).click();
+        findDiv("Нижестоящие тер. органы").click();
+        findInput("Логин").sendKeys("usertest1");
+        findDiv("usertest1").doubleClick();
+        findVisibleDiv(name).click();
+        button("Удалить роль").click();
+        findVisibleButton("Сохранить").click();
+        findDiv("Роль удалена").shouldBe(disappear);
+        findDiv("Изменения успешно сохранены").shouldBe(disappear);
+        close();
+    }
+
 }
