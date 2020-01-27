@@ -1,6 +1,6 @@
 package ru.test;
 
-import jdk.jfr.Description;
+
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -13,7 +13,7 @@ import static ru.actions.TestSetup.loginSetup;
 
 
 public class TestTest {
-
+//todo эт чо? зачем здесь?
     @BeforeClass
     public static void openSodch() {
         loginSetup();

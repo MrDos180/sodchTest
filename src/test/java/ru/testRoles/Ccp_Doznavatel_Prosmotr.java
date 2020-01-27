@@ -16,11 +16,11 @@ import static ru.elements.Buttons.kuspButton;
 public class Ccp_Doznavatel_Prosmotr {
     @Before
     public  void createUser () {
-
+        //todo нужно сделать лучше метод, который проверяет в целом нет ли там ролей. если они есть - удаляет все роли и добавляет только одну. Это универсальнее
         createUserAction("Дознаватель-следователь (только просмотр)");
 
     }
-
+    //todo тест не работает, потому что у чувака есть еще роли. автоматом уори не открывается и после этого теста не закрывается хром. подумай как можно решить нестабильность.
     @Test
     public void checkRoleAction () {
         TestSetup.loginSetup();

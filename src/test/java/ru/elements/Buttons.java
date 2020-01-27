@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class Buttons {
 
-
+//todo с таким локатором кнопок ты обосрешься в большом проекте. у тебя дублирующих кнопок может быть много поэтому старайся о таких вещах сразу думать заранее
     public static SelenideElement button (String name) {
         return  $(By.xpath(Selectors.findSpan(name)));
     }
@@ -19,7 +19,7 @@ public class Buttons {
     public static SelenideElement findVisibleButton (String name) {
         return   $$(By.xpath(Selectors.findSpantext(name))).filter(Condition.visible).get(0);
     }
-
+    //todo если ты сделал куски селекторов, почему в локаторах их не используешь?
     public static SelenideElement roleCheckbox (String name){
         return  $$(By.xpath("//div[.='"+name+"']//ancestor::tr//div[@class='x-grid-row-checker']")).filter(Condition.visible).get(0);
     }

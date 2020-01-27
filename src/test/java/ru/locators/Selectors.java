@@ -26,7 +26,7 @@ public class Selectors {
     {
         return "//span[.='"+input+"']";
     }
-
+//todo старайся комментировать все куски, иначе потом запутаешься
     public static String findTextAreaByDiv(String input) {return "//div[.='"+input+"']//textarea";}
     public static String findTextArea(String input)
     {

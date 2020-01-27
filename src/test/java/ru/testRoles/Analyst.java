@@ -30,9 +30,6 @@ public class Analyst {
         Inputs.findInput("Вид отчета:").setValue("Отчет по отсутствующим номерам КУСП");
         Inputs.findInput("Формат:").setValue("xls");
         findVisibleButton("Сформировать").click();
-
-
-
         close();
 
     }

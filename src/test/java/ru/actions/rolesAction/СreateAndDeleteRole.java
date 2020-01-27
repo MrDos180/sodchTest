@@ -12,6 +12,8 @@ import static ru.elements.Inputs.*;
 
 public class СreateAndDeleteRole {
 
+
+    //todo нет описания методов. не сразу понятно что делает каждый из методов если ты не погружен в контекст
     public static void createUserAction(String name) {
 
         TestSetup.loginSetup();
@@ -27,6 +29,7 @@ public class СreateAndDeleteRole {
         roleCheckbox(name).scrollIntoView("{block: \"center\"}").click();
         button("Выбрать").click();
         findVisibleButton("Сохранить").click();
+        //todo не disappear а visible и надо еще проверять что всплывюащее окно пропало.
         findDiv("Изменения успешно сохранены").shouldBe(disappear);
         close();
 
@@ -37,6 +40,8 @@ public class СreateAndDeleteRole {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("iivanov","iivanov");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
+        //todo и всё же старайся не делать в экшнах элементов типа finddiv, потому что нихуа непонятно что делает экшн из-за таких шагов. Лучше делать доп прослойку, где у тебя название элемента будет и туда транслировать селенид элемент
+
         findDiv("usertest").doubleClick();
         findVisibleDiv(name).click();
         button("Удалить роль").click();

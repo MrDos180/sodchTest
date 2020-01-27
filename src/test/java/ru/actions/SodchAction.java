@@ -1,6 +1,6 @@
 package ru.actions;
 
-import com.codeborne.selenide.Condition;
+
 import jdk.jfr.Description;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.*;
@@ -13,7 +13,7 @@ public class SodchAction {
 
     @Description("login SODCH")
 
-
+    //todo в чём разница двух первых методов? почему код дублируется?
    public static void loginAction (String sodchUsername, String sodchPassword) {
         findInput("Логин:").setValue(sodchUsername);
         findInput("Пароль:").setValue(sodchPassword);
@@ -55,6 +55,7 @@ public class SodchAction {
        String sumTime = summaryTimeField("Дата и время регистрации:").getValue();
        findVisibleButton("Сохранить").click();
        button("Закрыть").click();
+       //todo старайся в методах экшнах не испольовать селенид локаторы. для определения локаторов у тебя есть другие места в структуре
        $$(By.xpath("//div[.='"+ sumDate +" "+sumTime+"']")).filter(visible).get(0).shouldBe(visible);
 
 

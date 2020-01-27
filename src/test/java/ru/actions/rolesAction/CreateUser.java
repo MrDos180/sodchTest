@@ -15,6 +15,8 @@ public class CreateUser {
         private static final String Insert_Tbuser_Role =
                 "INSERT INTO isod.tbuser_role (user_id,role_id) VALUES ('41','-13');";
 
+
+        //todo очень много мейнов создал. они не нужны. это точки входа программы. при запуске через мавен ты споткнешься больно.
         public static void main(String[] args) {
             try (Connection connection = DriverManager.getConnection(ConnectionData.URL, ConnectionData.USER, ConnectionData.PASSWORD);
                  Statement statement = connection.createStatement()) {

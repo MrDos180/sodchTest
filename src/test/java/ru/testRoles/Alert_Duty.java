@@ -21,6 +21,7 @@ public class Alert_Duty {
     }
 
     @Test
+    //todo методы тестовые тоже называй понятно, а не обстрактно
     public void checkRoleAction () {
         TestSetup.loginSetup();
         SodchAction.loginActionForCreate("usertest","usertest");

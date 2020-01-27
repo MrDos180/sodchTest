@@ -9,9 +9,10 @@ public class TestSetup {
 
     public static void loginSetup() {
 
-
+        //todo сюда можно еще воткнуть логин пользака и передавать параметром логопас
+        //todo поменял браузер на фаерфокс
         Configuration.timeout = 10000;
-        Configuration.browser = "chrome";
+        Configuration.browser = "firefox";
        // Configuration.startMaximized= true;
         open("http://192.168.238.65:10001/mvd/#backdoor");
 
