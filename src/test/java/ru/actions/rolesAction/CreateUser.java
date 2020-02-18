@@ -10,8 +10,8 @@ public class CreateUser {
                         "VALUES ('41','usertest','usertest',NOW(),NOW(),'isod','1');";
         private static final String Insert_Tbemployee =
                 "INSERT INTO isod.tbemployee (employee_id,last_name,first_name,middle_name,date_of_birth,email,phone,user_id,department_id,\n" +
-                        "                             job_position_id,create_date,modify_date,last_updator,active,temp)\n" +
-                        " VALUES ('99','Скриптовый','Скрипт','Скриптович','1972-02-01','sc@script.com','+79999999999','41','-770000','-115075',NOW(),NOW(),'isod','1','0')";
+                        "                             job_position_id,create_date,modify_date,last_updator,active,temp,rank_id)\n" +
+                        " VALUES ('99','Скриптовый','Скрипт','Скриптович','1972-02-01','sc@script.com','+79999999999','41','-770000','-115075',NOW(),NOW(),'isod','1','0','-54')";
         private static final String Insert_Tbuser_Role =
                 "INSERT INTO isod.tbuser_role (user_id,role_id) VALUES ('41','-13');";
 
