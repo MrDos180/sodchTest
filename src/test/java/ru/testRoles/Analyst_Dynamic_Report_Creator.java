@@ -21,8 +21,7 @@ public class Analyst_Dynamic_Report_Creator {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");;
         kuspButton("Конструктор шаблонов").shouldBe(visible).click();
 
         close();

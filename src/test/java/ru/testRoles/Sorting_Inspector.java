@@ -23,8 +23,7 @@ public class Sorting_Inspector {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Журнал").shouldBe(visible).click();
         findVisibleButton("Создать").click();
         Inputs.sortingField("Основание задержания и доставления:").setValue("ПОДОЗРЕВАЕТСЯ В СОВЕРШЕНИИ ПРЕСТУПЛЕНИЯ");

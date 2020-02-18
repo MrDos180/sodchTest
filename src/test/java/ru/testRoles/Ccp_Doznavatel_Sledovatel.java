@@ -22,8 +22,7 @@ public class Ccp_Doznavatel_Sledovatel {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         Inputs.findDiv("Рабочий стол").shouldBe(visible);
         //kuspButton("Тер. орган").shouldBe(visible).click();
 

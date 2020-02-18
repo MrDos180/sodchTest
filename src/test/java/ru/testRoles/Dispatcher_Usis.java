@@ -24,8 +24,7 @@ public class Dispatcher_Usis {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("История маршрута ").shouldBe(visible).click();
         switchTo().window(1);
        findVisibleButton("Сформировать").shouldBe(visible);

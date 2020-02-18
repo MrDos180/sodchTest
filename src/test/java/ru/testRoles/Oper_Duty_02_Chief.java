@@ -19,8 +19,7 @@ public class Oper_Duty_02_Chief {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
        // SodchAction.createKuspAction();
 
 

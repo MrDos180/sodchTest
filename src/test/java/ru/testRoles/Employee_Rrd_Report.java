@@ -23,8 +23,7 @@ public class Employee_Rrd_Report {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Отчеты").shouldBe(visible).click();
         findVisibleButton("Сформировать новый отчет").click();
         Inputs.findInput("Вид отчета:").setValue("Сверка уголовной статистики");

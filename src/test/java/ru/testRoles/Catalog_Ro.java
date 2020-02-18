@@ -21,8 +21,7 @@ public class Catalog_Ro {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Учет ТС").shouldBe(visible).click();
 
 

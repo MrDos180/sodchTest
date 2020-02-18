@@ -21,8 +21,7 @@ public class Omvd_Duty {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         SodchAction.createKuspAction();
 
 

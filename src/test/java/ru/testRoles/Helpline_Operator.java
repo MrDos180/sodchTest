@@ -21,8 +21,7 @@ public class Helpline_Operator {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         //kuspButton("Просмотр сводок").shouldBe(visible).click();
 
 

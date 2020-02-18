@@ -21,8 +21,7 @@ public class Summary_Reader {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Просмотр сводок").shouldBe(visible).click();
 
 

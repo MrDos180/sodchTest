@@ -21,8 +21,7 @@ public class Dds_Info_Admin {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         //kuspButton("Журнал КП02").shouldBe(visible).click();
 
 

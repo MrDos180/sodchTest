@@ -23,8 +23,7 @@ public class Alert_Duty {
     @Test
     //todo методы тестовые тоже называй понятно, а не обстрактно
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Полученные").shouldBe(visible).click();
         findVisibleButton("Создать").click();
         Inputs.findInput("Тема:").setValue("тест");

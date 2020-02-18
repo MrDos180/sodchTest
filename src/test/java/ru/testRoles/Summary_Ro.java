@@ -21,8 +21,7 @@ public class Summary_Ro {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Журнал").shouldBe(visible).click();
         close();
 

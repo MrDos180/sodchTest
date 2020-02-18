@@ -24,8 +24,7 @@ public class Rrc_Read_Only {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         button("Поиск").shouldBe(visible).click();
         close();
 

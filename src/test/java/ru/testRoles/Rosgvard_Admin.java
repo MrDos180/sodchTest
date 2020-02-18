@@ -21,8 +21,7 @@ public class Rosgvard_Admin {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Тер. орган").shouldBe(visible).click();
 
 

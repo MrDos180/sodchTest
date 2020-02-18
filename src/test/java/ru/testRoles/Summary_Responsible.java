@@ -23,8 +23,7 @@ public class Summary_Responsible {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Загрузка сводок").shouldBe(visible).click();
 
         close();

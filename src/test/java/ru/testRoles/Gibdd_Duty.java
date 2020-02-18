@@ -21,8 +21,7 @@ public class Gibdd_Duty {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Журнал КП02").shouldBe(visible).click();
 
 

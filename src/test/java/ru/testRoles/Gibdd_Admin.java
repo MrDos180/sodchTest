@@ -23,8 +23,7 @@ public class Gibdd_Admin {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
         close();
 

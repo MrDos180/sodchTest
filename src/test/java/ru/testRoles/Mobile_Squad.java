@@ -22,8 +22,7 @@ public class Mobile_Squad {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         button("В работе").shouldBe(visible).click();
 
         close();

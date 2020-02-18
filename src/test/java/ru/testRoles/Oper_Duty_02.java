@@ -17,14 +17,13 @@ public class Oper_Duty_02 {
     @Before
     public  void createUser () {
 
-        createNoGuUserAction("Оператор  02");
+        createNoMvdUserAction("Оператор  02");
 
     }
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest1","usertest1");
+        TestSetup.loginSetup("usertest1","usertest1");
         kuspButton("Создать КП02").shouldBe(visible).click();
         Inputs.findVisibleInput("Адрес:").setValue("г. Москва, пр-кт. Мира, 112");
         Inputs.findInput("Тип происшествия:").setValue("Взрыв");
@@ -41,6 +40,6 @@ public class Oper_Duty_02 {
     }
     @After
     public void deleteRole (){
-        deleteNoGuRoleAction("Оператор  02");
+        deleteNoMvdRoleAction("Оператор  02");
     }
 }

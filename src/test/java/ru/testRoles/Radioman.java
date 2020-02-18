@@ -22,8 +22,7 @@ public class Radioman {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Опер. обстановка").shouldBe(visible).click();
         switchTo().window(1);
         kuspButton("Свой тер. орган").shouldBe(visible);

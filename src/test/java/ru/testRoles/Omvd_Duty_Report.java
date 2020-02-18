@@ -24,8 +24,7 @@ public class Omvd_Duty_Report {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Отчеты").shouldBe(visible).click();
         findVisibleButton("Сформировать новый отчет").click();
         Inputs.findInput("Вид отчета:").setValue("Просрочен срок принятия решения по записи КУСП (от 3 суток до 10 суток)");

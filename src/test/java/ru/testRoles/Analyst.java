@@ -23,8 +23,7 @@ public class Analyst {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Статические отчеты").shouldBe(visible).click();
         findVisibleButton("Сформировать новый отчет").click();
         Inputs.findInput("Вид отчета:").setValue("Отчет по отсутствующим номерам КУСП");

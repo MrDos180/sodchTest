@@ -25,8 +25,7 @@ public class Rrc_Integration_Service {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         button("События").shouldBe(visible).click();
         rrcButton("Создать").shouldBe(visible).click();
         Inputs.findRrcList("Криминальное (ЧП)").click();

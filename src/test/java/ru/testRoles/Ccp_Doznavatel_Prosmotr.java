@@ -23,8 +23,7 @@ public class Ccp_Doznavatel_Prosmotr {
     //todo тест не работает, потому что у чувака есть еще роли. автоматом уори не открывается и после этого теста не закрывается хром. подумай как можно решить нестабильность.
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         Inputs.findDiv("Рабочий стол").shouldBe(visible);
 
 

@@ -23,8 +23,7 @@ public class Oper_Plan_Admin {
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Патрульные участки").shouldBe(visible).click();
         findVisibleButton("Добавить").click();
         Inputs.findInput("Тип наряда:").setValue("ДПС");

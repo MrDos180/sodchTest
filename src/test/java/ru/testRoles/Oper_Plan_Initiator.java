@@ -26,8 +26,7 @@ public class Oper_Plan_Initiator {
 
     @Test
     public void checkRoleAction ()  {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest","usertest");
+        TestSetup.loginSetup("usertest","usertest");
         kuspButton("Отчеты").shouldBe(visible).click();
         findVisibleButton("Сформировать новый отчет").click();
         Inputs.findInput("Вид отчета:").setValue("Отчет о выставлении личного состава");
@@ -35,8 +34,8 @@ public class Oper_Plan_Initiator {
         roleCheckbox("Ленский ЛОП").click();
         findunvisibleButton("Выбрать").click();
 
-        Inputs.findInput("Начало периода:").setValue(CreatingDate.dateMinusDay());
-        Inputs.findInput("Конец периода:").setValue(CreatingDate.currentDay());
+        Inputs.findInput("Начало периода:").setValue(CreatingDate.date(-1));
+        Inputs.findInput("Конец периода:").setValue(CreatingDate.date(0));
         findVisibleButton("Сформировать").click();
 
         close();

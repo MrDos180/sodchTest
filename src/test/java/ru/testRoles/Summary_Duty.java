@@ -13,14 +13,13 @@ public class Summary_Duty {
     @Before
     public  void createUser () {
 
-        createNoGuUserAction("Оператор сводки");
+        createNoMvdUserAction("Оператор сводки");
 
     }
 
     @Test
     public void checkRoleAction () {
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("usertest1","usertest1");
+        TestSetup.loginSetup("usertest1","usertest1");
          SodchAction.createSummaryAction();
 
 
@@ -32,6 +31,6 @@ public class Summary_Duty {
     }
     @After
     public void deleteRole (){
-        deleteNoGuRoleAction("Оператор сводки");
+        deleteNoMvdRoleAction("Оператор сводки");
     }
 }
