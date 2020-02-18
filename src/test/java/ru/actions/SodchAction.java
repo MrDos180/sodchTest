@@ -13,21 +13,15 @@ public class SodchAction {
 
     @Description("login SODCH")
 
-    //todo в чём разница двух первых методов? почему код дублируется?
+
    public static void loginAction (String sodchUsername, String sodchPassword) {
         findInput("Логин:").setValue(sodchUsername);
         findInput("Пароль:").setValue(sodchPassword);
        button("Войти").click();
-       kuspButton("Создать КУСП").shouldBe(visible);
+
 
    }
-    public static void loginActionForCreate (String sodchUsername, String sodchPassword) {
-        findInput("Логин:").setValue(sodchUsername);
-        findInput("Пароль:").setValue(sodchPassword);
-        button("Войти").click();
 
-
-    }
 
     @Description("create KUSP")
    public static void createKuspAction() {

@@ -12,7 +12,7 @@ import static ru.actions.TestSetup.loginSetup;
 
 
 
-public class TestTest {
+/*public class TestTest {
 //todo эт чо? зачем здесь?
     @BeforeClass
     public static void openSodch() {
@@ -22,7 +22,7 @@ public class TestTest {
    // @BeforeClass
    // public static void login () {loginAction("operalex","operalex");}
 
-  /*    @Test
+      @Test
   @Description("Login SODCH and KUSP create")
   public void createKusp() {
 
@@ -38,7 +38,7 @@ public class TestTest {
     @Test
     @Description("Choose roles")
     public void chooseRole() {
-        loginActionForCreate("iivanov","iivanov");
+        loginAction("iivanov","iivanov");
 
 
     }
@@ -46,5 +46,5 @@ public class TestTest {
     @AfterClass
     public static void logout () {
         close();
-    }*/
-}
+    }
+}*/

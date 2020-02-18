@@ -16,8 +16,7 @@ public class СreateAndDeleteRole {
     //todo нет описания методов. не сразу понятно что делает каждый из методов если ты не погружен в контекст
     public static void createUserAction(String name) {
 
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("iivanov","iivanov");
+        TestSetup.loginSetup("iivanov","iivanov");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
         findDiv("usertest").doubleClick();
         findVisibleButton("Назначить роль").click();
@@ -37,8 +36,7 @@ public class СreateAndDeleteRole {
 
 
     public static void deleteRoleAction (String name){
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("iivanov","iivanov");
+        TestSetup.loginSetup("iivanov","iivanov");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
         //todo и всё же старайся не делать в экшнах элементов типа finddiv, потому что нихуа непонятно что делает экшн из-за таких шагов. Лучше делать доп прослойку, где у тебя название элемента будет и туда транслировать селенид элемент
 
@@ -51,10 +49,9 @@ public class СreateAndDeleteRole {
         close();
     }
 
-    public static void createNoGuUserAction(String name) {
+    public static void createNoMvdUserAction(String name) {
 
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("iivanov","iivanov");
+        TestSetup.loginSetup("iivanov","iivanov");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
         findDiv("Нижестоящие тер. органы").click();
         findInput("Логин").sendKeys("usertest1");
@@ -74,9 +71,8 @@ public class СreateAndDeleteRole {
 
     }
 
-    public static void deleteNoGuRoleAction (String name){
-        TestSetup.loginSetup();
-        SodchAction.loginActionForCreate("iivanov","iivanov");
+    public static void deleteNoMvdRoleAction (String name){
+        TestSetup.loginSetup("iivanov","iivanov");
         kuspButton("Пользователи и группы").shouldBe(visible).click();
         findDiv("Нижестоящие тер. органы").click();
         findInput("Логин").sendKeys("usertest1");

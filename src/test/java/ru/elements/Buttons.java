@@ -36,7 +36,12 @@ public class Buttons {
     public static SelenideElement rrcVisibleButton (String name) {
         return $$(By.xpath(Selectors.findRrcButton(name))).filter(Condition.visible).get(0);
     }
+    // Ищет А с открытой вкладкой в роли pps_duty
+    public static SelenideElement findAPps (String name){return $(By.xpath(Selectors.findAOpen(name)));}
+    public static SelenideElement findA (String name){return $(By.xpath(Selectors.findA(name)));}
 
+    public static SelenideElement findButtonPps (String name1,String name2){return $$(By.xpath(Selectors.findDivAncestor(name1)+Selectors.findSpan(name2))).filter(Condition.visible).get(0);
+    }
 
 
 }

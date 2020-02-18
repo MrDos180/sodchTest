@@ -72,4 +72,12 @@ public class Inputs {
     public static SelenideElement findRrcFabula (){
         return $(By.xpath("//textarea[@name='reportContent']"));
     }
+
+    //Находит input у pps
+    public static SelenideElement findInputPps (String name1,String name2, String name3) {return  $(By.xpath(Selectors.findDivPps(name1) + Selectors.findSecondDivPps(name2) + Selectors.findInputPps(name3))  ); }
+
+
+    public static SelenideElement findTextarea (String name) {return $(By.xpath(Selectors.findTextAreaByDiv(name)));}
+
+
 }

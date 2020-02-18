@@ -9,22 +9,16 @@ public class CreatingDate {
 
 
 
-    public static String currentDay() {
+    public static String date(int day) {
             Calendar cal = Calendar.getInstance();
-            cal.add(Calendar.DATE, 0);
+            cal.add(Calendar.DATE, day);
             Date date = cal.getTime();
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
             return dateFormat.format(date);
 
     }
 
-    //todo стремись к универсальности и сделай один метод в который ты будешь просто передавать цифру дня. если 0 то текущий, -дни - предыдущие, +дни - следующие. А так у тебя дублирование методов
-    public static String dateMinusDay(){
-        Calendar cal = Calendar.getInstance();
-        cal.add(Calendar.DATE, -1);
-        Date date = cal.getTime();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        return dateFormat.format(date) ;
-    }
+
+
 
 }

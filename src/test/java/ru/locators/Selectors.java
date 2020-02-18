@@ -53,6 +53,19 @@ public class Selectors {
     public static String findDivByText(String input) {
         return "//div[text()='" + input + "']";
     }
-
+    // Ищет верний элемент на странице
+    public static String findDivPps (String input) { return "//div[.='" + input + "']/following-sibling::div";}
+    // Ищет второй элемент на странице
+    public static String findSecondDivPps (String input){return "//div[.='" + input + "']/ancestor::fieldset";}
+    // Ищет input на странице
+    public static String findInputPps (String input){return "//div[.='" + input + "']//input";}
+    // Ищет A с открытой вкладкой
+    public static String findAOpen (String input)
+    {
+        return "//a[.='" + input + "' and contains(@class,'x-tab-active')]";
+    }
+    //div[.='Причина отсутствия:']//ancestor::div//span[.='Сохранить']
+    // Находит Div через ancestor
+    public static String findDivAncestor (String input){return "//div[.='" + input + "']//ancestor::div" ; }
 
 }
